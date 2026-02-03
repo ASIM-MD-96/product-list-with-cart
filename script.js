@@ -120,16 +120,16 @@ confirmOrderBtn.classList.add("hidden");
 function displayProducts(products) {
   products.forEach((products, index) => {
     let html = `<div class="product__preview rounded-xl"  data-index="${index}">
-            <div class="relative flex justify-center">
+            <div class="relative flex justify-center ">
               <img
                 src="${products.image.mobile}"
                 alt=""
-                class="rounded-xl md:hidden"
+                class="rounded-xl md:hidden hover:border-2 hover:border-red"
               />
               <img
                 src="${products.image.desktop}"
                 alt=""
-                class="hidden md:block rounded-xl"
+                class="hidden md:block rounded-xl hover:border-2 hover:border-red"
               />
               <button
                 class="add__to__cart__btn flex gap-2 font-redhat font-semibold border border-rose500 py-2 px-4 rounded-full absolute -bottom-4 bg-rose50"
