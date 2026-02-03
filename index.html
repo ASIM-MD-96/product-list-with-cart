@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Product list with cart</title>
+  </head>
+  <body class="bg-rose50 max-h-fit">
+    <!-- global container -->
+
+    <div class="global__container flex flex-col p-10 mx-auto">
+      <!-- header -->
+      <div class="header">
+        <h1 class="text-4xl ml-6 text-rose900 font-redhat font-bold text-left">
+          Desserts
+        </h1>
+      </div>
+
+      <!-- product img section -->
+      <main class="mx-auto p-6 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section
+          class="product__container mt-4 grid gap-4 md:grid-cols-3 md:col-span-2"
+        >
+          <div class="product__preview rounded-xl hidden">
+            <div class="relative flex justify-center">
+              <img
+                src="images/image-waffle-mobile.jpg"
+                alt=""
+                class="rounded-xl md:hidden"
+              />
+              <img
+                src="images/image-waffle-mobile.jpg"
+                alt=""
+                class="hidden md:block rounded-xl"
+              />
+              <button
+                class="add__to__cart__btn flex gap-2 font-redhat font-semibold border border-rose500 py-2 px-4 rounded-full absolute -bottom-4 bg-rose50"
+              >
+                <img src="./images/icon-add-to-cart.svg" alt="" />
+                Add to cart
+              </button>
+              <div
+                class="qunatity__box absolute flex bg-red font-redhat font-semibold border border-rose500 px-4 py-2 rounded-full -bottom-4"
+              >
+                <div class="product__sum flex flex-row gap-8">
+                  <img
+                    src="images/icon-decrement-quantity.svg"
+                    alt=""
+                    class="decrement p-1 w-5 h-5 border rounded-full cursor-pointer"
+                  />
+                  <p class="product-count text-rose50">1</p>
+                  <img
+                    src="images/icon-increment-quantity.svg"
+                    alt=""
+                    class="increment p-1 w-5 h-5 border rounded-full cursor-pointer"
+                  />
+                </div>
+              </div>
+            </div>
+
+            <p
+              class="product__category mt-8 text-sm font-redhat font-semibold text-rose300"
+            >
+              Waffle
+            </p>
+            <h3
+              class="product__name text-lg text-rose900 font-semibold font-redhat"
+            >
+              Waffle with Berries
+            </h3>
+            <p
+              class="product__price text-red text-lg font-redhat font-semibold"
+            >
+              $6.50
+            </p>
+            <!-- add-to-cart -->
+          </div>
+        </section>
+        <!-- cart section -->
+
+        <section
+          class="selected__products rounded-xl h-fit bg-white p-4 mt-10 md:-mt-16"
+        >
+          <aside>
+            <h2
+              class="your__cart text-3xl text-red font-redhat font-bold md:p-0"
+            >
+              Your cart (<span class="cart-count">0</span>)
+            </h2>
+
+            <div
+              class="yourcart__emptyimg flex flex-col items-center justify-center"
+            >
+              <img
+                src="images/illustration-empty-cart.svg"
+                alt=""
+                class="w-1/2 mt-4"
+              />
+
+              <p
+                class="yourcart__emptytext text-lg text-rose500 font-redhat font-semibold text-center"
+              >
+                Your added items is will appear here
+              </p>
+            </div>
+            <div class="fill__cart">
+              <div class="fillcart__items flex flex-col justify-between">
+                <p
+                  class="fillcart__product__name items-center font-redhat font-semibold text-rose900"
+                >
+                  <!-- Classic Tiramisu -->
+                </p>
+                <div class="justify-between items-center py-2 border-b">
+                  <div class="relative">
+                    <p
+                      class="fillcart__product__calc text-sm text-red font-bold"
+                    >
+                      <!-- 1x -->
+                      <span
+                        class="fill__product__rate text-rose500 font-normal"
+                      >
+                        <!-- $5.50 -->
+                      </span>
+                      <span
+                        class="fillcart__product--total text-rose500 font-semibold"
+                      >
+                        <!-- $5.50 -->
+                      </span>
+                    </p>
+                    <img
+                      src="images/icon-remove-item.svg"
+                      alt=""
+                      class="remove__icon w-4 h-4 p-0.5 border border-rose500 rounded-full absolute right-0 -top-2 hidden"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- order Total -->
+            <div>
+              <p
+                class="cart_total flex justify-between text-xl font-bold mt-4 font-redhat text-rose900 items-center"
+              >
+                <span
+                  class="cart__total__text flex flex-col capitalize text-sm font-normal font-redhat"
+                  >order total</span
+                >
+                $0.00
+              </p>
+            </div>
+
+            <!-- icon with text-->
+            <div class="neutral__section">
+              <div
+                class="neutral__content mt-4 flex bg-rose100 rounded justify-center gap-4 p-2"
+              >
+                <img src="images/icon-carbon-neutral.svg" alt="" />
+                <p class="neutral__text text-sm font-redhat text-rose900">
+                  This is a
+                  <span class="font-semibold">carbon-neutral</span> delivery
+                </p>
+              </div>
+            </div>
+            <!-- confirm Order -->
+            <button
+              class="confirm__order__btn mt-4 text-rose50 text-lg font-semibold font-redhat bg-red/90 py-2 w-full rounded-full hover:bg-red"
+            >
+              confirm order
+            </button>
+          </aside>
+        </section>
+      </main>
+    </div>
+    <!-- Start new order section -->
+    <div
+      class="start__new__content mt-24 bg-white rounded-xl w-full md:max-w-xl p-10 absolute z-50 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-screen md:h-min hidden"
+    >
+      <div class="start__new__icon">
+        <img src="images/icon-order-confirmed.svg" alt="" />
+      </div>
+
+      <h2
+        class="start__new__header order-confirmed-header text-3xl text-rose900 font-bold font-redhat mt-4"
+      >
+        Order Confirmed
+      </h2>
+      <p class="start__new__text text-sm text-rose500 font-redhat">
+        We hope enjoy your food
+      </p>
+      <!-- orderconfirmed cart -->
+      <div class="confirm__order__preview bg-rose100 p-4 mt-4 rounded-lg">
+        <div class="confirm__order__content relative flex flex-col gap-4">
+          <img
+            src="images/image-waffle-thumbnail.jpg"
+            alt=""
+            class="thumbnail_img rounded-lg"
+          />
+          <p
+            class="confirm__order__text flex flex-col text-sm p-2 text-rose900 font-redhat font-semibold justify-between"
+          >
+            Waflle with Berries
+            <span class="text-red text-sm"
+              >1x <span class="text-rose500 ml-2"> @$6.50</span></span
+            >
+          </p>
+          <p
+            class="confirm__order__total text-rose900 text-lg font-bold font-redhat absolute top-8 right-0"
+          >
+            $6.50
+          </p>
+        </div>
+
+        <div>
+          <p
+            class="confirm__order__grandtotal flex justify-between text-xl font-bold mt-4 font-redhat text-rose900 items-center"
+          >
+            <span
+              class="flex flex-col capitalize text-sm font-normal font-redhat"
+              >order total</span
+            >
+            $0.00
+          </p>
+        </div>
+      </div>
+      <button
+        class="start__new__order--btn mt-4 text-rose50 text-lg font-semibold font-redhat bg-red/90 py-2 w-full rounded-full hover:bg-red capitalize"
+      >
+        start new order
+      </button>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
