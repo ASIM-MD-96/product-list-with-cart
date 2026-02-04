@@ -603,10 +603,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   max-height: fit-content;
 }
 
-.max-h-screen {
-  max-height: 100vh;
-}
-
 .w-5 {
   width: 1.25rem;
 }
@@ -673,14 +669,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   gap: 0.5rem;
 }
 
-.overflow-hidden {
-  overflow: hidden;
-}
-
-.overflow-y-auto {
-  overflow-y: auto;
-}
-
 .rounded-xl {
   border-radius: 0.75rem;
 }
@@ -708,11 +696,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-rose500 {
   --tw-border-opacity: 1;
   border-color: hsl(12 20% 44% / var(--tw-border-opacity));
-}
-
-.border-red {
-  --tw-border-opacity: 1;
-  border-color: hsl(14 86% 42% / var(--tw-border-opacity));
 }
 
 .bg-rose50 {
@@ -853,14 +836,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-rose500 {
   --tw-text-opacity: 1;
   color: hsl(12 20% 44% / var(--tw-text-opacity));
-}
-
-.opacity-100 {
-  opacity: 1;
-}
-
-.opacity-50 {
-  opacity: 0.5;
 }
 
 .opacity {
