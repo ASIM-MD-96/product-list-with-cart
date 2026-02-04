@@ -567,6 +567,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.5rem;
 }
 
+.-mt-10 {
+  margin-top: -2.5rem;
+}
+
+.-mt-20 {
+  margin-top: -5rem;
+}
+
 .flex {
   display: flex;
 }
@@ -683,6 +691,15 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .rounded-lg {
   border-radius: 0.5rem;
+}
+
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
+.rounded-t-3xl {
+  border-top-left-radius: 1.5rem;
+  border-top-right-radius: 1.5rem;
 }
 
 .border {
@@ -865,6 +882,10 @@ Ensure the default browser behavior of the `hidden` attribute.
     margin-top: -4rem;
   }
 
+  .md\:-mt-0 {
+    margin-top: -0px;
+  }
+
   .md\:block {
     display: block;
   }
@@ -885,6 +906,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:rounded-3xl {
+    border-radius: 1.5rem;
   }
 
   .md\:p-0 {
