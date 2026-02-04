@@ -117,6 +117,7 @@ const body = document.querySelector("body");
 neutral.classList.add("hidden");
 cartTotal.classList.add("hidden");
 confirmOrderBtn.classList.add("hidden");
+
 function displayProducts(products) {
   products.forEach((products, index) => {
     let html = `<div class="product__preview rounded-xl"  data-index="${index}">
@@ -381,7 +382,7 @@ function startNewOrderEl() {
   const newBtn = document.createElement("button");
   newBtn.className =
     "start__new__order--btn mt-4 text-rose50 text-lg font-semibold font-redhat bg-red/90 py-2 w-full rounded-full hover:bg-red capitalize";
-  newBtn.innerHTML = ` start new order`;
+  newBtn.innerHTML = `start new order`;
   startNewOrder.appendChild(newBtn);
 }
 
@@ -424,6 +425,3 @@ confirmOrderBtn.addEventListener("click", function () {
 
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
-// window.addEventListener("scroll", function () {
-//   console.log(this.window.scrollY);
-// });
