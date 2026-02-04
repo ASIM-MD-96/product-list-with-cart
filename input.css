@@ -2,6 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-.opacity {
+.afterconfirm {
   @apply opacity-50;
 }

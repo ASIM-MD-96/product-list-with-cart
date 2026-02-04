@@ -395,6 +395,7 @@ function reset() {
   document.querySelectorAll(".add__to__cart__btn").forEach((btn) => {
     btn.classList.remove("hidden");
   });
+  globalContainer.classList.remove("afterconfirm");
   startNewOrder.innerHTML = "";
   startNewOrder.classList.add("hidden");
   globalContainer.classList.remove("opacity-50");
@@ -418,10 +419,10 @@ startNewOrder.addEventListener("click", function (e) {
 
 confirmOrderBtn.addEventListener("click", function () {
   startNewOrder.classList.remove("hidden");
-  globalContainer.classList.add("opacity-50");
+  globalContainer.classList.add("afterconfirm");
   startNewOrderEl();
 
-  // window.scrollTo({ top: 150, behavior: "smooth" });
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 // window.addEventListener("scroll", function () {
 //   console.log(this.window.scrollY);
