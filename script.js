@@ -324,6 +324,11 @@ function startNewOrderEl() {
         We hope enjoy your food
       </p>`;
   let grandTotal = 0;
+
+  const previewBox = document.createElement("div");
+  previewBox.className =
+    "confirm_order_preview bg-rose100 p-4 mt-4 rounded-lg w-full max-h-[300px] overflow-y-auto";
+
   Object.entries(cart).forEach(([index, qty]) => {
     if (!qty) return;
     const product = products[index];
@@ -335,8 +340,10 @@ function startNewOrderEl() {
     const item = document.createElement("div");
     item.classList = "confirm__order__content relative flex mt-4 border-b";
 
-    item.innerHTML = `<div class="flex  gap-4 p-2">
-    <img
+    startNewOrder.appendChild(previewBox);
+    item.innerHTML = `
+          <div class="flex  gap-4 p-2 ">
+             <img
             src="${product.image.thumbnail}"
             alt=""
             class="thumbnail_img rounded-lg"
@@ -355,8 +362,9 @@ function startNewOrderEl() {
             $${total.toFixed(2)}
           </p>   
         </div>
+         
         `;
-    startNewOrder.appendChild(item);
+    previewBox.appendChild(item);
   });
   // total
   const grandTot = document.createElement("p");
@@ -412,5 +420,9 @@ confirmOrderBtn.addEventListener("click", function () {
   startNewOrder.classList.remove("hidden");
   globalContainer.classList.add("opacity-50");
   startNewOrderEl();
-  window.scrollTo({ top: 0, behavior: "smooth" });
+
+  // window.scrollTo({ top: 150, behavior: "smooth" });
 });
+// window.addEventListener("scroll", function () {
+//   console.log(this.window.scrollY);
+// });
